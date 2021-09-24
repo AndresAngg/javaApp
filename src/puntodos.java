@@ -1,26 +1,19 @@
 import java.util.Scanner;
 public class puntodos {
     public void IMC(){
-        Scanner sc = new Scanner(System.in);
+       Scanner scanner = new Scanner(System.in);
+        int num, temporal, sw1=0, sw2=1;
+
+       System.out.println("Ingrese un número");
+       num = scanner.nextInt();
         
-        double altura, peso, mic;
+       for(int i = 0 ; i < num; i++) {
+            System.out.println(sw1);
+            temporal = sw1 + sw2;
+            sw1=sw2;
+            sw2=temporal;
+       }
 
-        System.out.println("Ingrese su altura(m):");
-        altura = sc.nextDouble();
-        System.out.println("Ingrese su peso(kg):");
-        peso = sc.nextDouble();
-
-        mic = peso/(altura*altura);
-        System.out.println(mic);
-        if(mic <= 18.5){
-            System.out.println("Delgado");
-        }else if(mic > 18.5 && mic <= 24.9){
-            System.out.println("Normal");
-        }else if(mic > 24.9 && mic <= 29.9){
-            System.out.println("Sobrepeso");
-        }else{
-            System.out.println("Obseidad");
-        }
     }
 
 }
